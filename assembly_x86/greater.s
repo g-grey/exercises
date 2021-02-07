@@ -3,7 +3,7 @@
 .section .data
     prompt: .asciz "Enter number: "
     input: .asciz "%d"
-	output: .asciz "%d greater than %d\n"
+    output: .asciz "%d greater than %d\n"
     #x: .int 0
 
 .section .bss
@@ -13,7 +13,7 @@
 .globl main
 main:
     push $prompt
-	call printf
+    call printf
     addl $4, %esp
 
     push $x
@@ -23,7 +23,7 @@ main:
     movl x, %ebx
 
     push $prompt
-	call printf
+    call printf
     addl $4, %esp
 
     push $x
@@ -45,7 +45,7 @@ greater:
 
 end:
     push $output
-	call printf
+    call printf
     addl $12, %esp
-	push $0
-	call exit
+    push $0
+    call exit

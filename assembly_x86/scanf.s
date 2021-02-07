@@ -1,7 +1,7 @@
 # scanf example
 
 .section .data
-	prompt: .asciz "Enter number: "
+    prompt: .asciz "Enter number: "
     input: .asciz "%d"
     output: .asciz "You entered %d.\n"
     x: .int 0
@@ -10,7 +10,7 @@
 main:
     nop
     push $prompt
-	call printf
+    call printf
     addl $4, %esp
 
     push $x
@@ -23,5 +23,5 @@ main:
     call printf
     addl $8, %esp
 
-	push $0
-	call exit
+    push $0
+    call exit

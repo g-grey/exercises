@@ -22,4 +22,3 @@ rand_int:
     
     push $0
     call exit
-
